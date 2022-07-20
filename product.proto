@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+// https://developers.google.com/protocol-buffers/docs/proto3
+
+package go.micro.service.product;
+
+service Product {
+    rpc AddProduct(ProductInfo) returns (ResponseProduct);
+}
+
+message ProductInfo{
+    int64 id = 1;
+    string product_name = 2;
+}
+
+message ResponseProduct {
+    int64 product_id = 1;
+}
+
+// docker pull cap1573/cap-protoc
+// docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE={YOUR_TOKEN} cap1573/cap-protoc -I ./ --go_out=./ --micro_out=./ ./*.proto
