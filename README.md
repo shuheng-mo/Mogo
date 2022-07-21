@@ -6,12 +6,14 @@
 -->
 <!-- using the static badge because it is private, covert to dynamic ones if public  -->
 <!-- https://shields.io/#your-badge -->
+
+[//]: # ([![Build status]&#40;https://github.com/acse-sm321/Mogo/workflows/{action}/badge.svg&#41;]&#40;https://github.com/acse-sm321/Mogo/actions&#41;)
+
 <div>
-<img src="https://img.shields.io/badge/test-failed-red">
-<!-- <img src="https://img.shields.io/badge/test-passing-green"> -->
-<img src="https://img.shields.io/badge/issues-1-red">
-<img src="https://img.shields.io/badge/contributors-1-green">
-<img src="https://img.shields.io/badge/license-MIT-yellow">
+<img src="https://img.shields.io/github/issues/acse-sm321/Mogo">
+<img src="https://img.shields.io/github/forks/acse-sm321/Mogo">
+<img src="https://img.shields.io/github/stars/acse-sm321/Mogo">
+<img src="https://img.shields.io/github/license/acse-sm321/Mogo">
 </div>
 
 <!-- PROJECT LOGO -->
@@ -22,14 +24,14 @@
 
 <h1 align="center">MOGO</h1>
   <p align="center">
-    <a href="https://github.com/ese-msc-2021/irp-sm321/tree/main/documentation"><strong>Read the code documentation »</strong></a>
+    <a href="https://github.com/acse-sm321/Mogo"><strong>Read the code documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ese-msc-2021/irp-sm321">View Demo</a>
+    <a href="https://github.com/acse-sm321/Mogo">View Demo</a>
     ·
-    <a href="https://github.com/ese-msc-2021/irp-sm321/issues">Report Bug</a>
+    <a href="https://github.com/acse-sm321/Mogo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ese-msc-2021/irp-sm321/issues">Request Feature</a>
+    <a href="https://github.com/acse-sm321/Mogo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -74,16 +76,18 @@ Project structure:
 ```
 ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 ### Code Metadata
 
 This section listed the major frameworks/libraries used to bootstrap this project. Other add-ons/plugins please refer to the acknowledgements section.
 
-* [go-micro](https://mpi4py.readthedocs.io/en/stable/)
+* go-micro
+* gRPC
+* protobuf (version 3)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -93,14 +97,10 @@ Here is an example of how you may give instructions on setting up this project l
 ### Prerequisites
 
 There are some prerequisites before you compile and run the project on local machine or your AI computers. Note that this project built by Python language and relevant packages, add-ons, dependencies.
-* Python [Installation guide](https://www.python.org/downloads/)
-* Anaconda (optional) [Installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
-* mpi4py [Installation guide](https://mpi4py.readthedocs.io/en/latest/install.html)
+* Go [Installation guide](https://go.dev/)
   ```bash
-  # using pip
-  $ python -m pip install mpi4py
-  # using conda (mpich, openmpi recommended on HPC)
-  $ conda install -c conda-forge mpi4py mpich
+  # using go get
+  $ go get ...
   ```
 
 ### Installation
@@ -109,14 +109,14 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ese-msc-2021/irp-sm321
+   git clone https://github.com/acse-sm321/Mogo
    ```
 2. Install required packages / compile
     ```
     pip install -e .
     ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 
 
@@ -129,11 +129,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 Code example:
 ```
-# runing the parallel scripts
-$ mpiexec -n 16 python parallel_advection_diffusion_2D.py
+# Executing
+$ ./app
+
+$ 
 ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 
 
@@ -142,9 +144,9 @@ $ mpiexec -n 16 python parallel_advection_diffusion_2D.py
 
 - [ ] The first objective.
 
-See the [open issues](https://github.com/ese-msc-2021/irp-sm321/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/acse-sm321/Mogo/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -159,7 +161,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/your_feature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 
 
@@ -168,53 +170,26 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Distributed under the MIT License. See [`LICENSE.md`](https://github.com/ese-msc-2021/irp-sm321/blob/main/LICENSE.md) for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 ## References
-- [Some book title here]()
+- [Books or materials here]()
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [me](sm321@ic.ac.uk)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-Shuheng Mo - [sm321@ic.ac.uk](shuheng.mo21@imperial.ac.uk)
+Shuheng Mo - [163 mail](shuheng_mo_mail@163.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-
-<!-- ## About IRP project
-
-We generated this repository for you to work in during your IRP. Please note that if your code is confidential, you do not need to submit your code here.
-
-- For project information updates, please refer to `README.md` in [`info/`](./info) directory.
-- For details on deliverable submissions, please refer to `README.md` in [`reports/`](./reports) directory.
-
-If you have any questions or experience any difficulties, please do not hesitate to get in touch with Marijan (m.beg@imperial.ac.uk).
-
-Please feel free to remove this text from `README.md` and write it the way you want. ;) -->
 
