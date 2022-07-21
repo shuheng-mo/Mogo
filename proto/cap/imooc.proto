@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package go.micro.service.imooc;
+
+service Cap{
+    rpc SayHello(SayRequest) returns (SayResponse) {}
+}
+
+message SayRequest {
+    string message = 1;
+}
+
+message SayResponse {
+    string answer = 1;
+}
+//docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE=68272CAA3468CEED cap1573/cap-protoc -I ./ --go_out=./ --micro_out=./ ./proto/cap/imooc.proto
