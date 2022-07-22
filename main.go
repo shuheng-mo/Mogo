@@ -1,12 +1,14 @@
 package main
 
 import (
-	"user/handler"
-	pb "user/proto"
-
 	"github.com/micro/micro/v3/service"
 	"github.com/micro/micro/v3/service/logger"
+
+	"github.com/acse-sm321/Mogo/handler"
 )
+
+// get the
+// docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE={CODE_HERE} cap1573/cap-protoc -I ./ --go_out=./ --micro_out=./ ./proto/user/user.proto
 
 func main() {
 	// Create service

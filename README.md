@@ -72,8 +72,9 @@ A micro-service application written by Go.
 Core features:
 *  RESTful API
 
-Project structure:
-```
+This project followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro), which open-sourced and licensed.
+```bash
+$ docker pull micro/micro
 ```
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
@@ -85,7 +86,9 @@ This section listed the major frameworks/libraries used to bootstrap this projec
 * go-micro
 * gRPC
 * protobuf (version 3)
+* Docker
 
+Note this project followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro).
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
@@ -173,13 +176,18 @@ Distributed under the MIT License. See [`LICENSE.md`](https://github.com/ese-msc
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 ## References
-- [Books or materials here]()
+- Docker containers 
+  - [cap1573/cap-protoc](https://hub.docker.com/r/cap1573/cap-protoc)
+
+- Github repositories
+
+- Book and publications
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* [me](sm321@ic.ac.uk)
+* [cap1573](https://hub.docker.com/u/cap1573)
 
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
