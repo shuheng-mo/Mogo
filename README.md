@@ -86,7 +86,9 @@ This section listed the major frameworks/libraries used to bootstrap this projec
 * go-micro
 * gRPC
 * protobuf (version 3)
+* gorm
 * Docker
+* K8S
 
 Note this project followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro).
 
@@ -100,7 +102,10 @@ Here is an example of how you may give instructions on setting up this project l
 ### Prerequisites
 
 There are some prerequisites before you compile and run the project on local machine or your AI computers. Note that this project built by Python language and relevant packages, add-ons, dependencies.
-* Go [Installation guide](https://go.dev/)
+* [Go](https://go.dev/)
+* MySQL
+* Docker
+
   ```bash
   # using go get
   $ go get ...
