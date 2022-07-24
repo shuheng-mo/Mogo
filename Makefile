@@ -12,11 +12,11 @@ api:
 
 .PHONY: proto
 proto:
-	protoc --proto_path=. --micro_out=. --go_out=:. proto/user.proto
-	
+	docker run --rm -v $(shell pwd):$(shell pwd) -w $(shell pwd) -e ICODE=68272CAA3468CEED cap1573/cap-protoc -I ./ --go_out=./ --micro_out=./ ./proto/user/*.proto
+
 .PHONY: build
 build:
-	go build -o user *.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o user main.go
 
 .PHONY: test
 test:
@@ -24,4 +24,4 @@ test:
 
 .PHONY: docker
 docker:
-	docker build . -t user:latest
+	docker build -t user:latest .
