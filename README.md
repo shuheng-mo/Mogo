@@ -10,6 +10,7 @@
 [//]: # ([![Build status]&#40;https://github.com/acse-sm321/Mogo/workflows/{action}/badge.svg&#41;]&#40;https://github.com/acse-sm321/Mogo/actions&#41;)
 
 <div>
+<img src="https://github.com/acse-sm321/Mogo/workflows/test/badge.svg">
 <img src="https://img.shields.io/github/issues/acse-sm321/Mogo">
 <img src="https://img.shields.io/github/forks/acse-sm321/Mogo">
 <img src="https://img.shields.io/github/stars/acse-sm321/Mogo">
