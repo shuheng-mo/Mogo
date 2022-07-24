@@ -36,7 +36,20 @@ func (u *User) Login(ctx context.Context, userLogin *user.UserLoginRequest, logi
 	return nil
 }
 
-// TODO
-//func (u *User) GetUserInfo(context.Context, *UserInfoRequest, *UserInfoResponse) error {
-//
-//}
+func (u *User) GetUserInfo(ctx context.Context, userInfoRequest *user.UserInfoRequest, userInfoResponse *user.UserInfoResponse) error {
+	userInfo, err := u.UserDataService.FindUserByName(userInfoRequest.UserName)
+	if err != nil {
+		return nil
+	}
+	userInfoResponse = UserForResponse(userInfo)
+	return nil
+}
+
+// data type conversion
+func UserForResponse(userModel *model.User) *user.UserInfoResponse {
+	response := &user.UserInfoResponse{}
+	response.UserName = userModel.UserName
+	response.FirstName = userModel.FirstName
+	response.UserId = userModel.ID
+	return response
+}
