@@ -1,2 +1,0 @@
-docker run -p 3306:3306 -v $pwd/data:/var/lib/mysql -e
-MYSQL_ROOT_PASSWORD=19990429 -d --name micro-mysql cap1573/mysql:5.6

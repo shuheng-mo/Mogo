@@ -87,6 +87,7 @@ This section listed the major frameworks/libraries used to bootstrap this projec
 * gRPC
 * protobuf (version 3)
 * gorm
+* [Consul](https://github.com/hashicorp/consul)
 * Docker
 * K8S
 
