@@ -7,10 +7,7 @@
 <!-- using the static badge because it is private, covert to dynamic ones if public  -->
 <!-- https://shields.io/#your-badge -->
 
-[//]: # ([![Build status]&#40;https://github.com/acse-sm321/Mogo/workflows/{action}/badge.svg&#41;]&#40;https://github.com/acse-sm321/Mogo/actions&#41;)
-
 <div>
-<img src="https://github.com/acse-sm321/Mogo/workflows/test/badge.svg">
 <img src="https://img.shields.io/github/issues/acse-sm321/Mogo">
 <img src="https://img.shields.io/github/forks/acse-sm321/Mogo">
 <img src="https://img.shields.io/github/stars/acse-sm321/Mogo">
@@ -67,6 +64,9 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+[![Test](https://github.com/acse-sm321/Mogo/workflows/Test/badge.svg)](https://github.com/acse-sm321/Mogo/actions)
+
 
 A micro-service application written by Go.
 
