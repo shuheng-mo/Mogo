@@ -178,7 +178,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [`LICENSE.md`](https://github.com/ese-msc-2021/irp-sm321/blob/main/LICENSE.md) for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/ese-msc-2021/irp-sm321/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
@@ -194,6 +194,7 @@ Distributed under the MIT License. See [`LICENSE.md`](https://github.com/ese-msc
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+This project won't born without the help of these wonderful people/coporations:
 * [cap1573](https://hub.docker.com/u/cap1573)
 
 
@@ -202,7 +203,8 @@ Distributed under the MIT License. See [`LICENSE.md`](https://github.com/ese-msc
 <!-- CONTACT -->
 ## Contact
 
-Shuheng Mo - [163 mail](shuheng_mo_mail@163.com)
+Shuheng Mo - [Contact me](https://linktr.ee/shuheng_mo)
+
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
