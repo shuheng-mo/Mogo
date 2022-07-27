@@ -1,7 +1,7 @@
 package model
 
 type Product struct {
-	ID                 int64          `gorm:"primary_key;not_null;auto_increment"`
+	ID                 int64          `gorm:"primary_key;not_null;auto_increment" json:"id"`
 	ProductName        string         `json:"product_name"`
 	ProductSku         string         `gorm:"unique_index:not_null" json:"product_sku"`
 	ProductPrice       float64        `json:"product_price"`

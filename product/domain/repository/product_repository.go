@@ -25,8 +25,7 @@ type ProductRepository struct {
 
 //
 func (u *ProductRepository) InitTable() error {
-	return u.mysqlDb.CreateTable(&model.Product{},
-		&model.Product{}, &model.ProductSeo{}, &model.ProductImage{}, &model.ProductSize{}).Error
+	return u.mysqlDb.CreateTable(&model.Product{}, &model.ProductSeo{}, &model.ProductImage{}, &model.ProductSize{}).Error
 }
 
 //
