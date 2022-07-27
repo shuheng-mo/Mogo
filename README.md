@@ -90,6 +90,7 @@ This section listed the major frameworks/libraries used to bootstrap this projec
 * gorm
 * [Consul](https://github.com/hashicorp/consul)
 * [Jaeger](https://github.com/jaegertracing/jaeger)
+* [hystrix-go](https://github.com/afex/hystrix-go)
 * Docker
 * K8S
 
