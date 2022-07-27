@@ -16,6 +16,7 @@ message ProductInfo{
 	string product_sku = 3;
 	double product_price = 4;
 	string product_description = 5;
+	int64 product_category_id = 6;
 	repeated ProductImage product_image = 7;
 	repeated ProductSize product_size = 8;
 	ProductSeo product_seo = 9;
@@ -23,9 +24,9 @@ message ProductInfo{
 
 message ProductImage{
 	int64 id = 1;
-	string images_name = 2;
-	string images_code = 3;
-	string images_url = 4;
+	string image_name = 2;
+	string image_code = 3;
+	string image_url = 4;
 }
 
 message ProductSize{
