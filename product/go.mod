@@ -3,19 +3,17 @@ module github.com/acse-sm321/Mogo/product
 go 1.17
 
 require (
+	github.com/acse-sm321/Mogo/common v0.0.0-20220802090403-e2b050fb0dd4
 	github.com/golang/protobuf v1.5.2
 	github.com/jinzhu/gorm v1.9.16
 	github.com/micro/go-micro/v2 v2.9.1
-	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1
 	github.com/micro/go-plugins/registry/consul/v2 v2.9.1
 	github.com/micro/go-plugins/wrapper/trace/opentracing/v2 v2.9.1
-	github.com/opentracing/opentracing-go v1.1.0
-	github.com/uber/jaeger-client-go v2.30.0+incompatible
+	github.com/opentracing/opentracing-go v1.2.0
 )
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
-	github.com/HdrHistogram/hdrhistogram-go v1.1.2 // indirect
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/bitly/go-simplejson v0.5.0 // indirect
 	github.com/coreos/etcd v3.3.18+incompatible // indirect
@@ -45,6 +43,7 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/kevinburke/ssh_config v0.0.0-20190725054713-01f96b0aa0cd // indirect
 	github.com/micro/cli/v2 v2.1.2 // indirect
+	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1 // indirect
 	github.com/miekg/dns v1.1.27 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/hashstructure v1.0.0 // indirect
@@ -59,7 +58,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
-	github.com/stretchr/testify v1.7.0 // indirect
+	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	github.com/xanzy/ssh-agent v0.2.1 // indirect
 	go.uber.org/atomic v1.5.0 // indirect
@@ -72,7 +71,6 @@ require (
 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
 	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/tools v0.0.0-20191216173652-a0e659d51361 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20191216164720-4f79533eabd1 // indirect
 	google.golang.org/grpc v1.26.0 // indirect
 	google.golang.org/protobuf v1.26.0 // indirect
@@ -80,5 +78,6 @@ require (
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.2.4 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 	honnef.co/go/tools v0.0.1-2019.2.3 // indirect
 )

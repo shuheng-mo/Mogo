@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	common2 "github.com/acse-sm321/Mogo/product/common"
+	common2 "github.com/acse-sm321/Mogo/common"
 	go_micro_service_product "github.com/acse-sm321/Mogo/product/proto/product"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"

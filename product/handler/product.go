@@ -2,7 +2,7 @@ package handler
 
 import (
 	"context"
-	common2 "github.com/acse-sm321/Mogo/product/common"
+	common2 "github.com/acse-sm321/Mogo/common"
 	"github.com/acse-sm321/Mogo/product/domain/model"
 	"github.com/acse-sm321/Mogo/product/domain/service"
 	product "github.com/acse-sm321/Mogo/product/proto/product"
