@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	go_micro_service_cart "github.com/acse-sm321/Mogo/cart/proto/cart"
 	"github.com/acse-sm321/Mogo/cartApi/handler"
 	cartApi "github.com/acse-sm321/Mogo/cartApi/proto/cartApi"
 	"github.com/acse-sm321/Mogo/common"
@@ -12,6 +13,7 @@ import (
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
+	"github.com/micro/go-plugins/wrapper/select/roundrobin/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
 	"net"
@@ -53,14 +55,21 @@ func main() {
 		micro.Address("0.0.0.0:8086"),
 		micro.Registry(consul),
 		micro.WrapClient(opentracing2.NewClientWrapper(opentracing.GlobalTracer())),
-		micro.WrapClient(NewClienH)
+		// set up hystrix
+		micro.WrapClient(NewClientHystrixWrapper()),
+		// set up load balance
+		micro.WrapClient(roundrobin.NewClientWrapper()),
 	)
 
 	// Initialise service
 	service.Init()
 
+	cartService := go_micro_service_cart.NewCartService("go.micro.service.cart", service.Client())
+
 	// Register Handler
-	cartApi.RegisterCartApiHandler(service.Server(), new(handler.CartApi))
+	if err := cartApi.RegisterCartApiHandler(service.Server(), &handler.CartApi{CartService: cartService}); err != nil {
+		log.Error(err)
+	}
 
 	// Run service
 	if err := service.Run(); err != nil {
@@ -72,9 +81,19 @@ type clientWrapper struct {
 	client.Client
 }
 
-func (c *clientWrapper) Call(ctx context.Context,req client.Request,rsp interface{},opts ...client.CallOption) error {
-	return hystrix.Do(req.Service() + "." + req.Endpoint(), func() error {
-		fmt.Println("")
-		c.Client.Call(ctx,req,rsp,opts...)
+// Call calling the api exposed
+func (c *clientWrapper) Call(ctx context.Context, req client.Request, rsp interface{}, opts ...client.CallOption) error {
+	return hystrix.Do(req.Service()+"."+req.Endpoint(), func() error {
+		fmt.Println(req.Service() + "." + req.Endpoint())
+		return c.Client.Call(ctx, req, rsp, opts...)
+	}, func(err error) error {
+		fmt.Println(err)
+		return err
 	})
+}
+
+func NewClientHystrixWrapper() client.Wrapper {
+	return func(i client.Client) client.Client {
+		return &clientWrapper{i}
+	}
 }
