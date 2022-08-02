@@ -2,8 +2,8 @@ package handler
 
 import (
 	"context"
-	"git.imooc.com/cap1573/cart/domain/service"
-	cart "git.imooc.com/cap1573/cart/proto/cart"
+	"github.com/acse-sm321/Mogo/cart/domain/service"
+	cart "github.com/acse-sm321/Mogo/cart/proto/cart"
 	log "github.com/micro/go-micro/v2/logger"
 )
 

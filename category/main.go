@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/category/common"
 	"github.com/acse-sm321/Mogo/category/domain/repository"
 	service2 "github.com/acse-sm321/Mogo/category/domain/service"
 	"github.com/acse-sm321/Mogo/category/handler"
 	category "github.com/acse-sm321/Mogo/category/proto/category"
+	"github.com/acse-sm321/Mogo/common"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"

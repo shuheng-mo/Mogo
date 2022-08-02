@@ -1,13 +1,11 @@
 
-
 .PHONY: proto
 proto:
-	sudo docker run --rm -v $(shell pwd):$(shell pwd) -w $(shell pwd) -e ICODE=xxxxxx cap1573/cap-protoc -I ./ --micro_out=./ --go_out=./ ./proto/cart/cart.proto
+	docker run --rm -v $(shell pwd):$(shell pwd) -w $(shell pwd) -e ICODE=68272CAA3468CEED cap1573/cap-protoc -I ./ --micro_out=./ --go_out=./ ./proto/category/category.proto
 
 .PHONY: build
-build: 
-
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o cart-service *.go
+build:
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o category-service *.go
 
 .PHONY: test
 test:
@@ -15,4 +13,4 @@ test:
 
 .PHONY: docker
 docker:
-	docker build . -t cart-service:latest
+	docker build . -t category-service:latest

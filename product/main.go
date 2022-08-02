@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/product/common"
+	"github.com/acse-sm321/Mogo/common"
 	"github.com/acse-sm321/Mogo/product/domain/repository"
 	service2 "github.com/acse-sm321/Mogo/product/domain/service"
 	"github.com/acse-sm321/Mogo/product/handler"

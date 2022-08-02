@@ -1,10 +1,11 @@
 package main
 
 import (
-	"git.imooc.com/cap1573/cart/handler"
+	"github.com/acse-sm321/Mogo/cart/handler"
+	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 
-	cart "git.imooc.com/cap1573/cart/proto/cart"
+	cart "github.com/acse-sm321/Mogo/cart/proto/cart"
 )
 
 func main() {
