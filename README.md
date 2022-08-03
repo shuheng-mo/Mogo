@@ -180,7 +180,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/ese-msc-2021/irp-sm321/blob/main/LICENSE.md) for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/acse-sm321/Mogo/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
