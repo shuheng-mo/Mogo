@@ -17,23 +17,19 @@ import (
 	"github.com/opentracing/opentracing-go"
 )
 
-var QPS = 100 // query per second
+var QPS = 100
 
 func main() {
-	// Consul configuration
 	consulConfig, err := common.GetConsulConfig("127.0.0.1", 8500, "/micro/config")
 	if err != nil {
 		log.Error(err)
 	}
-
-	// Register centre
 	consul := consul2.NewRegistry(func(options *registry.Options) {
 		options.Addrs = []string{
 			"127.0.0.1:8500",
 		}
 	})
 
-	// Jaeger setup
 	t, io, err := common.NewTracer("go.micro.service.cart", "localhost:6831")
 	if err != nil {
 		log.Error(err)
@@ -41,7 +37,6 @@ func main() {
 	defer io.Close()
 	opentracing.SetGlobalTracer(t)
 
-	// Connect to mysql
 	mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
 	db, err := gorm.Open("mysql", mysqlInfo.User+":"+mysqlInfo.Pwd+"@/"+mysqlInfo.Database+"?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
@@ -50,23 +45,18 @@ func main() {
 	defer db.Close()
 	db.SingularTable(true)
 
-	// Init table
 	//err = repository.NewCartRepository(db).InitTable()
 	//if err != nil {
 	//	log.Error(err)
 	//}
 
-	// New Service
 	service := micro.NewService(
 		micro.Name("go.micro.service.cart"),
 		micro.Version("latest"),
-		// expose service
-		micro.Address("0.0.0.0:8087"),
-		// register centre
+		micro.Address("146.169.157.226:8087"),
+		//micro.Address("127.0.0.1:8087"),
 		micro.Registry(consul),
-		// path tracing
 		micro.WrapHandler(opentracing2.NewHandlerWrapper(opentracing.GlobalTracer())),
-		// add flow control
 		micro.WrapHandler(ratelimit.NewHandlerWrapper(QPS)),
 	)
 

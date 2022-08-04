@@ -12,7 +12,7 @@ type Cart struct {
 	CartDataService service.ICartDataService
 }
 
-// AddCart add new cart
+//
 func (h *Cart) AddCart(ctx context.Context, request *cart.CartInfo, response *cart.ResponseAdd) (err error) {
 	cart := &model.Cart{}
 	common.SwapTo(request, cart)
@@ -20,40 +20,44 @@ func (h *Cart) AddCart(ctx context.Context, request *cart.CartInfo, response *ca
 	return err
 }
 
-func (h *Cart) CleanCart(ctx context.Context, request *cart.Clean, response *cart.Response) (err error) {
+//
+func (h *Cart) CleanCart(ctx context.Context, request *cart.Clean, response *cart.Response) error {
 	if err := h.CartDataService.CleanCart(request.UserId); err != nil {
 		return err
 	}
-	response.Meg = "Cart cleaned successfully"
+	response.Meg = "cart cleaned"
 	return nil
 }
 
-func (h *Cart) Incr(ctx context.Context, request *cart.Item, response *cart.Response) (err error) {
+//
+func (h *Cart) Incr(ctx context.Context, request *cart.Item, response *cart.Response) error {
 	if err := h.CartDataService.IncrNum(request.Id, request.ChangeNum); err != nil {
 		return err
 	}
-	response.Meg = "Increased the num of the cart"
+	response.Meg = "carts added"
 	return nil
 }
 
-func (h *Cart) Decr(ctx context.Context, request *cart.Item, response *cart.Response) (err error) {
+//
+func (h *Cart) Decr(ctx context.Context, request *cart.Item, response *cart.Response) error {
 	if err := h.CartDataService.DecrNum(request.Id, request.ChangeNum); err != nil {
 		return err
 	}
-	response.Meg = "Decreased the num of the cart"
+	response.Meg = "carts reduced"
 	return nil
 }
 
-func (h *Cart) DeleteItemByID(ctx context.Context, request *cart.CartID, response *cart.Response) (err error) {
+//
+func (h *Cart) DeleteItemByID(ctx context.Context, request *cart.CartID, response *cart.Response) error {
 	if err := h.CartDataService.DeleteCart(request.Id); err != nil {
 		return err
 	}
-	response.Meg = "Cart has been deleted"
+	response.Meg = "cart deleted"
 	return nil
 }
 
-// GetAll get all carts of a user
-func (h *Cart) GetAll(ctx context.Context, request *cart.CartFindAll, response *cart.CartAll) (err error) {
+//
+func (h *Cart) GetAll(ctx context.Context, request *cart.CartFindAll, response *cart.CartAll) error {
 	cartAll, err := h.CartDataService.FindAllCart(request.UserId)
 	if err != nil {
 		return err

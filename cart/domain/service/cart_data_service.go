@@ -17,7 +17,6 @@ type ICartDataService interface {
 	IncrNum(int64, int64) error
 }
 
-//
 func NewCartDataService(cartRepository repository.ICartRepository) ICartDataService {
 	return &CartDataService{cartRepository}
 }
@@ -26,27 +25,22 @@ type CartDataService struct {
 	CartRepository repository.ICartRepository
 }
 
-//
 func (u *CartDataService) AddCart(cart *model.Cart) (int64, error) {
 	return u.CartRepository.CreateCart(cart)
 }
 
-//
 func (u *CartDataService) DeleteCart(cartID int64) error {
 	return u.CartRepository.DeleteCartByID(cartID)
 }
 
-//
 func (u *CartDataService) UpdateCart(cart *model.Cart) error {
 	return u.CartRepository.UpdateCart(cart)
 }
 
-//
 func (u *CartDataService) FindCartByID(cartID int64) (*model.Cart, error) {
 	return u.CartRepository.FindCartByID(cartID)
 }
 
-//
 func (u *CartDataService) FindAllCart(userID int64) ([]model.Cart, error) {
 	return u.CartRepository.FindAll(userID)
 }

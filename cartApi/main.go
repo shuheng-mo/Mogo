@@ -38,7 +38,7 @@ func main() {
 	hystrixStreamHandler.Start()
 
 	go func() {
-		err = http.ListenAndServe(net.JoinHostPort("0.0.0.0", "9096"), hystrixStreamHandler)
+		err = http.ListenAndServe(net.JoinHostPort("146.169.157.226", "9096"), hystrixStreamHandler)
 		if err != nil {
 			log.Error(err)
 		}
@@ -48,7 +48,8 @@ func main() {
 	service := micro.NewService(
 		micro.Name("go.micro.api.cartApi"),
 		micro.Version("latest"),
-		micro.Address("0.0.0.0:8086"),
+		micro.Address("146.169.157.226:8086"),
+		//micro.Address("127.0.0.1:8086"),
 		micro.Registry(consul),
 		micro.WrapClient(opentracing2.NewClientWrapper(opentracing.GlobalTracer())),
 		micro.WrapClient(NewClientHystrixWrapper()),
@@ -61,7 +62,6 @@ func main() {
 	cartService := go_micro_service_cart.NewCartService("go.micro.service.cart", service.Client())
 
 	//cartService.AddCart(context.TODO(), &go_micro_service_cart.CartInfo{
-	//
 	//	UserId:    3,
 	//	ProductId: 4,
 	//	SizeId:    5,
@@ -100,9 +100,10 @@ func NewClientHystrixWrapper() client.Wrapper {
 }
 
 // to do the registration
-// docker run --rm -p 8080:8080 -e ICODE=68272CAA3468CEED cap1573/cap-micro --registry=consul --registry_address=YOUR_IP api --handler=api
+// docker run --rm -p 8080:8080 -e ICODE=68272CAA3468CEED cap1573/cap-micro --registry=consul --registry_address=YOUR_IP:8500 api --handler=api
 // run the hystrix dashboard
 // docker run -d -p 9002:9002 cap1573/hystrix-dashboard
 // access the hystrix dashboard by http://localhost:9002/hystrix
-// access the hystrix stream: http://146.169.150.247:9096/hystrix.stream
+// access the hystrix stream: http://146.169.157.226:9096/hystrix.stream
 // access the api by: http://127.0.0.1:8080/cartApi/findAll?user_id=1
+//146.169.157.226.

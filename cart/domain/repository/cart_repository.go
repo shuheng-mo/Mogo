@@ -19,7 +19,6 @@ type ICartRepository interface {
 	DecrNum(int64, int64) error
 }
 
-//
 func NewCartRepository(db *gorm.DB) ICartRepository {
 	return &CartRepository{mysqlDb: db}
 }
@@ -28,49 +27,40 @@ type CartRepository struct {
 	mysqlDb *gorm.DB
 }
 
-//
 func (u *CartRepository) InitTable() error {
 	return u.mysqlDb.CreateTable(&model.Cart{}).Error
 }
 
-//
 func (u *CartRepository) FindCartByID(cartID int64) (cart *model.Cart, err error) {
 	cart = &model.Cart{}
 	return cart, u.mysqlDb.First(cart, cartID).Error
 }
 
-// CreateCart create a new cart
 func (u *CartRepository) CreateCart(cart *model.Cart) (int64, error) {
-	// get first or create a new one with given condition
 	db := u.mysqlDb.FirstOrCreate(cart, model.Cart{ProductID: cart.ProductID, SizeID: cart.SizeID, UserID: cart.UserID})
 	if db.Error != nil {
 		return 0, db.Error
 	}
-
-	// if no rows affected we failed to add new cart
 	if db.RowsAffected == 0 {
-		return 0, errors.New("failed to add new cart")
+		return 0, errors.New("failed to create new cart")
 	}
 	return cart.ID, nil
 }
 
-//
 func (u *CartRepository) DeleteCartByID(cartID int64) error {
 	return u.mysqlDb.Where("id = ?", cartID).Delete(&model.Cart{}).Error
 }
 
-//
 func (u *CartRepository) UpdateCart(cart *model.Cart) error {
 	return u.mysqlDb.Model(cart).Update(cart).Error
 }
 
-//
 func (u *CartRepository) FindAll(userID int64) (cartAll []model.Cart, err error) {
-	return cartAll, u.mysqlDb.Where("user_id=?", userID).Find(&cartAll).Error
+	return cartAll, u.mysqlDb.Where("user_id = ?", userID).Find(&cartAll).Error
 }
 
 func (u *CartRepository) CleanCart(userID int64) error {
-	return u.mysqlDb.Where("user_id=?").Delete(&model.Cart{}).Error
+	return u.mysqlDb.Where("user_id = ?", userID).Delete(&model.Cart{}).Error
 }
 
 func (u *CartRepository) IncrNum(cartID int64, num int64) error {
@@ -84,9 +74,8 @@ func (u *CartRepository) DecrNum(cartID int64, num int64) error {
 	if db.Error != nil {
 		return db.Error
 	}
-
 	if db.RowsAffected == 0 {
-		return errors.New("failed to decrease items in cart")
+		return errors.New("failed to remove cart")
 	}
 	return nil
 }
