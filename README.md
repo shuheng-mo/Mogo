@@ -186,7 +186,7 @@ Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/acs
 
 ## References
 - Docker containers 
-  - [cap1573/cap-protoc](https://hub.docker.com/r/cap1573/cap-protoc)
+  - used docker containers ...
 
 - Github repositories
 
@@ -197,8 +197,7 @@ Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/acs
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 This project won't born without the help of these wonderful people/coporations:
-* [cap1573](https://hub.docker.com/u/cap1573)
-
+*
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
