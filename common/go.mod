@@ -9,6 +9,8 @@ require (
 	github.com/prometheus/client_golang v1.1.0
 	github.com/prometheus/common v0.6.0
 	github.com/uber/jaeger-client-go v2.30.0+incompatible
+	go.uber.org/zap v1.13.0
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
 require (
@@ -46,6 +48,8 @@ require (
 	github.com/stretchr/testify v1.7.0 // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	go.uber.org/atomic v1.5.0 // indirect
+	go.uber.org/multierr v1.3.0 // indirect
+	go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee // indirect
 	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37 // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
 	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2 // indirect
@@ -56,4 +60,5 @@ require (
 	google.golang.org/protobuf v1.22.0 // indirect
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6 // indirect
 	gopkg.in/yaml.v2 v2.2.4 // indirect
+	honnef.co/go/tools v0.0.1-2019.2.3 // indirect
 )

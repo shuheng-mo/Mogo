@@ -19,8 +19,7 @@ import (
 )
 
 var (
-	//qps = os.Getenv("QPS")
-	QPS = 1000
+	QPS = 1000 // maximum query per second
 )
 
 func main() {

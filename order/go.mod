@@ -3,8 +3,8 @@ module github.com/acse-sm321/Mogo/order
 go 1.17
 
 require (
-	github.com/acse-sm321/Mogo/common v0.0.0-20220906223016-e69fcbaea121
-	github.com/golang/protobuf v1.5.2
+	github.com/acse-sm321/Mogo/common v0.0.0-20220907012523-af5773e86093
+	github.com/golang/protobuf v1.5.0
 	github.com/jinzhu/gorm v1.9.16
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/micro/go-plugins/registry/consul/v2 v2.9.1
@@ -16,6 +16,8 @@ require (
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
+	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
+	github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4 // indirect
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bitly/go-simplejson v0.5.0 // indirect
@@ -46,6 +48,7 @@ require (
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/kevinburke/ssh_config v0.0.0-20190725054713-01f96b0aa0cd // indirect
+	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/micro/cli/v2 v2.1.2 // indirect
 	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1 // indirect
@@ -67,6 +70,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	github.com/xanzy/ssh-agent v0.2.1 // indirect
@@ -84,6 +88,7 @@ require (
 	google.golang.org/genproto v0.0.0-20191216164720-4f79533eabd1 // indirect
 	google.golang.org/grpc v1.26.0 // indirect
 	google.golang.org/protobuf v1.26.0 // indirect
+	gopkg.in/alecthomas/kingpin.v2 v2.2.6 // indirect
 	gopkg.in/fsnotify.v1 v1.4.7 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect

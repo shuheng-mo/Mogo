@@ -68,7 +68,7 @@
 [![Test](https://github.com/acse-sm321/Mogo/workflows/Test/badge.svg)](https://github.com/acse-sm321/Mogo/actions)
 
 
-A micro-service application written by Go.
+A micro-service E-commerce application written by Go.
 
 Core features:
 *  RESTful API
@@ -91,10 +91,14 @@ This section listed the major frameworks/libraries used to bootstrap this projec
 * [Consul](https://github.com/hashicorp/consul)
 * [Jaeger](https://github.com/jaegertracing/jaeger)
 * [hystrix-go](https://github.com/afex/hystrix-go)
+* [grafana](https://grafana.com/grafana/dashboards/)
+* [Prometheus](https://prometheus.io/docs/guides/go-application/)
+* [ELK stack](https://www.elastic.co/elastic-stack?ultron=B-Stack-Trials-EMEA-UK-Exact&gambit=Stack-ELK&blade=adwords-s&hulk=paid&Device=c&thor=elk%20stack%20logging&gclid=Cj0KCQjwguGYBhDRARIsAHgRm49c4_7YcuZLwIs3Hi1MK0R4WAWhV4EuQ4PEzSh-dBROKHCt80AyxfYaAuxYEALw_wcB)
+* [zap](https://github.com/uber-go/zap)
 * Docker
 * K8S
 
-Note this project followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro).
+Each micro-service module followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro).
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
@@ -114,8 +118,8 @@ There are some prerequisites before you compile and run the project on local mac
   # using go get
   $ go get ...
   ```
-  
-    ```
+  Set up new key-value pairs in Consul like:
+  ```
     {
       "host":"127.0.0.1",
       "user":"root",
@@ -123,7 +127,7 @@ There are some prerequisites before you compile and run the project on local mac
       "database":"micro",
       "port":3306
     }
-    ```
+  ```
 
 ### Installation
 
