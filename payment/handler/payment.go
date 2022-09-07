@@ -1,10 +1,10 @@
 package handler
 
 import (
+	"context"
 	"github.com/acse-sm321/Mogo/common"
 	"github.com/acse-sm321/Mogo/payment/domain/model"
 	"github.com/acse-sm321/Mogo/payment/domain/service"
-	"context"
 	payment "github.com/acse-sm321/Mogo/payment/proto/payment"
 )
 
@@ -12,14 +12,52 @@ type Payment struct {
 	PaymentDataService service.IPaymentDataService
 }
 
-func (e *Payment) AddPayment(ctx context.Context, request *payment.PaymentInfo, response *payment.PaymentID) error{
+func (e *Payment) AddPayment(ctx context.Context, request *payment.PaymentInfo, response *payment.PaymentID) error {
 	payment := &model.Payment{}
-	if err := common.SwapTo(request,payment);err!=nil{
-		
+	if err := common.SwapTo(request, payment); err != nil {
+		common.Error(err)
 	}
+	paymentID, err := e.PaymentDataService.AddPayment(payment)
+
+	if err != nil {
+		common.Error(err)
+	}
+	response.PaymentId = paymentID
+	return nil
 }
 
-UpdatePayment(ctx context.Context, in *PaymentInfo, out *Response) error
-DeletePaymentByID(ctx context.Context, in *PaymentID, out *Response) error
-FindPaymentByID(ctx context.Context, in *PaymentID, out *PaymentInfo) error
-FindAllPayment(ctx context.Context, in *All, out *PaymentAll) error
+func (e *Payment) UpdatePayment(ctx context.Context, request *payment.PaymentInfo, response *payment.Response) error {
+	payment := &model.Payment{}
+	if err := common.SwapTo(request, payment); err != nil {
+		common.Error(err)
+	}
+	return e.PaymentDataService.UpdatePayment(payment)
+}
+
+func (e *Payment) DeletePaymentByID(ctx context.Context, request *payment.PaymentID, response *payment.Response) error {
+	return e.PaymentDataService.DeletePayment(request.PaymentId)
+}
+
+func (e *Payment) FindPaymentByID(ctx context.Context, request *payment.PaymentID, response *payment.PaymentInfo) error {
+	payment, err := e.PaymentDataService.FindPaymentByID(request.PaymentId)
+	if err != nil {
+		common.Error(err)
+	}
+	return common.SwapTo(payment, response)
+}
+
+func (e *Payment) FindAllPayment(ctx context.Context, request *payment.All, response *payment.PaymentAll) error {
+	allPayment, err := e.PaymentDataService.FindAllPayment()
+	if err != nil {
+		common.Error(err)
+	}
+
+	for _, v := range allPayment {
+		paymentInfo := &payment.PaymentInfo{}
+		if err := common.SwapTo(v, paymentInfo); err != nil {
+			common.Error(err)
+		}
+		response.PaymentInfo = append(response.PaymentInfo, paymentInfo)
+	}
+	return nil
+}

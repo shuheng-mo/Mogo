@@ -1,0 +1,1 @@
+{"level":"error","ts":"2022-09-07T21:04:40.623+0100","caller":"payment/main.go:25","msg":"error loading source consul: source not found: /micro/config"}
