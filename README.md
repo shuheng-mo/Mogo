@@ -114,6 +114,16 @@ There are some prerequisites before you compile and run the project on local mac
   # using go get
   $ go get ...
   ```
+  
+    ```
+    {
+      "host":"127.0.0.1",
+      "user":"root",
+      "pwd":"123456",
+      "database":"micro",
+      "port":3306
+    }
+    ```
 
 ### Installation
 

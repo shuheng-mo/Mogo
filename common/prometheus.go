@@ -1,8 +1,8 @@
 package common
 
 import (
-	log "github.com/micro/go-micro/v2/logger"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/prometheus/common/log"
 	"net/http"
 	"strconv"
 )
@@ -10,10 +10,10 @@ import (
 func PrometheusBoot(port int) {
 	http.Handle("/metrics", promhttp.Handler())
 	go func() {
-		err := http.ListenAndServe("0.0.0.0"+strconv.Itoa(port), nil)
+		err := http.ListenAndServe("0.0.0.0:"+strconv.Itoa(port), nil)
 		if err != nil {
-			log.Fatal("Failed to start the monitor.")
+			log.Fatal("启动失败")
 		}
-		log.Info("Monitor started successfully, port is: " + strconv.Itoa(port))
+		log.Info("监控启动,端口为：" + strconv.Itoa(port))
 	}()
 }
