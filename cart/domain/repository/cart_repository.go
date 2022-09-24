@@ -2,8 +2,8 @@ package repository
 
 import (
 	"errors"
-	"github.com/acse-sm321/Mogo/cart/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/shuheng-mo/Mogo/cart/domain/model"
 )
 
 type ICartRepository interface {

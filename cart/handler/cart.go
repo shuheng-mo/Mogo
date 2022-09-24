@@ -2,10 +2,10 @@ package handler
 
 import (
 	"context"
-	"github.com/acse-sm321/Mogo/cart/domain/model"
-	"github.com/acse-sm321/Mogo/cart/domain/service"
-	cart "github.com/acse-sm321/Mogo/cart/proto/cart"
-	"github.com/acse-sm321/Mogo/common"
+	"github.com/shuheng-mo/Mogo/cart/domain/model"
+	"github.com/shuheng-mo/Mogo/cart/domain/service"
+	cart "github.com/shuheng-mo/Mogo/cart/proto/cart"
+	"github.com/shuheng-mo/Mogo/common"
 )
 
 type Cart struct {

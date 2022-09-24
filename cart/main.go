@@ -1,20 +1,18 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/cart/domain/repository"
-	service2 "github.com/acse-sm321/Mogo/cart/domain/service"
-	"github.com/acse-sm321/Mogo/cart/handler"
-	cart "github.com/acse-sm321/Mogo/cart/proto/cart"
-	"github.com/acse-sm321/Mogo/common"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
-	"github.com/opentracing/opentracing-go"
+	"github.com/shuheng-mo/Mogo/cart/domain/repository"
+	service2 "github.com/shuheng-mo/Mogo/cart/domain/service"
+	"github.com/shuheng-mo/Mogo/cart/handler"
+	cart "github.com/shuheng-mo/Mogo/cart/proto/cart"
+	"github.com/shuheng-mo/Mogo/common"
 )
 
 var QPS = 100

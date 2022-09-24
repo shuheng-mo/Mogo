@@ -1,8 +1,8 @@
 package common
 
 import (
+	log "github.com/micro/go-micro/v2/logger"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/prometheus/common/log"
 	"net/http"
 	"strconv"
 )

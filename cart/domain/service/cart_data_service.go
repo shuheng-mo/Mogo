@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/acse-sm321/Mogo/cart/domain/model"
-	"github.com/acse-sm321/Mogo/cart/domain/repository"
+	"github.com/shuheng-mo/Mogo/cart/domain/model"
+	"github.com/shuheng-mo/Mogo/cart/domain/repository"
 )
 
 type ICartDataService interface {
