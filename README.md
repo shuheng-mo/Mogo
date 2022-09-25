@@ -8,10 +8,10 @@
 <!-- https://shields.io/#your-badge -->
 
 <div>
-<img src="https://img.shields.io/github/issues/acse-sm321/Mogo">
-<img src="https://img.shields.io/github/forks/acse-sm321/Mogo">
-<img src="https://img.shields.io/github/stars/acse-sm321/Mogo">
-<img src="https://img.shields.io/github/license/acse-sm321/Mogo">
+<img src="https://img.shields.io/github/issues/shuheng-mo/Mogo">
+<img src="https://img.shields.io/github/forks/shuheng-mo/Mogo">
+<img src="https://img.shields.io/github/stars/shuheng-mo/Mogo">
+<img src="https://img.shields.io/github/license/shuheng-mo/Mogo">
 </div>
 
 <!-- PROJECT LOGO -->
@@ -22,14 +22,14 @@
 
 <h1 align="center">MOGO</h1>
   <p align="center">
-    <a href="https://github.com/acse-sm321/Mogo"><strong>Read the code documentation »</strong></a>
+    <a href="https://github.com/shuheng-mo/Mogo"><strong>Read the code documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/acse-sm321/Mogo">View Demo</a>
+    <a href="https://github.com/shuheng-mo/Mogo">View Demo</a>
     ·
-    <a href="https://github.com/acse-sm321/Mogo/issues">Report Bug</a>
+    <a href="https://github.com/shuheng-mo/Mogo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/acse-sm321/Mogo/issues">Request Feature</a>
+    <a href="https://github.com/shuheng-mo/Mogo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -65,13 +65,14 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-[![Test](https://github.com/acse-sm321/Mogo/workflows/Test/badge.svg)](https://github.com/acse-sm321/Mogo/actions)
+[![Test](https://github.com/shuheng-mo/Mogo/workflows/Test/badge.svg)](https://github.com/shuheng-mo/Mogo/actions)
 
 
 A micro-service E-commerce application written by Go.
 
 Core features:
 *  RESTful API
+*  Paypal payment and refund
 
 This project followed the project structure provided by [micro](https://hub.docker.com/r/micro/micro), which open-sourced and licensed.
 ```bash
@@ -114,12 +115,28 @@ There are some prerequisites before you compile and run the project on local mac
 * MySQL
 * Docker
 
-  ```bash
-  # using go get
-  $ go get ...
-  ```
-  Set up new key-value pairs in Consul like:
-  ```
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/shuheng-mo/Mogo
+   ```
+2. Install customized wheels
+    ```
+    $ pip install -e .
+    # if use setup.py use pip install .
+    ```
+3. Set up go modules
+    ```bash
+      # update go dependencies
+      $ go mod tidy
+      # update required dependencies
+      $ go get ...
+    ```
+4. Set up new `key-value` pairs in Consul like:
+    ```
     {
       "host":"127.0.0.1",
       "user":"root",
@@ -127,19 +144,6 @@ There are some prerequisites before you compile and run the project on local mac
       "database":"micro",
       "port":3306
     }
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/acse-sm321/Mogo
-   ```
-2. Install required packages / compile
-    ```
-    pip install -e .
     ```
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
@@ -168,9 +172,10 @@ $
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] The first objective.
+- [x] Install MySQL and create databases (tables).
+- [x] DDD model template for each module.
 
-See the [open issues](https://github.com/acse-sm321/Mogo/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/shuheng-mo/Mogo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 
@@ -194,7 +199,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/acse-sm321/Mogo/blob/main/LICENSE) for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.md`](https://github.com/shuheng-mo/Mogo/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#top">BACK TO TOP</a>)</p>
 

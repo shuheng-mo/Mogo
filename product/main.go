@@ -1,11 +1,6 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/common"
-	"github.com/acse-sm321/Mogo/product/domain/repository"
-	service2 "github.com/acse-sm321/Mogo/product/domain/service"
-	"github.com/acse-sm321/Mogo/product/handler"
-	product "github.com/acse-sm321/Mogo/product/proto/product"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
@@ -14,6 +9,11 @@ import (
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
+	"github.com/shuheng-mo/Mogo/common"
+	"github.com/shuheng-mo/Mogo/product/domain/repository"
+	service2 "github.com/shuheng-mo/Mogo/product/domain/service"
+	"github.com/shuheng-mo/Mogo/product/handler"
+	product "github.com/shuheng-mo/Mogo/product/proto/product"
 )
 
 func main() {

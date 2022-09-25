@@ -2,10 +2,10 @@ package handler
 
 import (
 	"context"
-	"github.com/acse-sm321/Mogo/common"
-	"github.com/acse-sm321/Mogo/payment/domain/model"
-	"github.com/acse-sm321/Mogo/payment/domain/service"
-	payment "github.com/acse-sm321/Mogo/payment/proto/payment"
+	"github.com/shuheng-mo/Mogo/common"
+	"github.com/shuheng-mo/Mogo/payment/domain/model"
+	"github.com/shuheng-mo/Mogo/payment/domain/service"
+	payment "github.com/shuheng-mo/Mogo/payment/proto/payment"
 )
 
 type Payment struct {

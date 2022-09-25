@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/acse-sm321/Mogo/category/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/shuheng-mo/Mogo/category/domain/model"
 )
 
 type ICategoryRepository interface {

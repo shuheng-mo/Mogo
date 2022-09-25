@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/acse-sm321/Mogo/category/domain/model"
-	"github.com/acse-sm321/Mogo/category/domain/repository"
+	"github.com/shuheng-mo/Mogo/category/domain/model"
+	"github.com/shuheng-mo/Mogo/category/domain/repository"
 )
 
 type ICategoryDataService interface {

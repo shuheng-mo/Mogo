@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/acse-sm321/Mogo/payment/domain/model"
-	"github.com/acse-sm321/Mogo/payment/domain/repository"
+	"github.com/shuheng-mo/Mogo/payment/domain/model"
+	"github.com/shuheng-mo/Mogo/payment/domain/repository"
 )
 
 type IPaymentDataService interface {

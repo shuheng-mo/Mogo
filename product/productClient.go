@@ -3,14 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
-	common2 "github.com/acse-sm321/Mogo/common"
-	go_micro_service_product "github.com/acse-sm321/Mogo/product/proto/product"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
-	"github.com/opentracing/opentracing-go"
+	common2 "github.com/shuheng-mo/Mogo/common"
+	go_micro_service_product "github.com/shuheng-mo/Mogo/product/proto/product"
 )
 
 func main() {

@@ -2,11 +2,11 @@ package handler
 
 import (
 	"context"
-	"github.com/acse-sm321/Mogo/category/domain/model"
-	"github.com/acse-sm321/Mogo/category/domain/service"
-	category "github.com/acse-sm321/Mogo/category/proto/category"
-	"github.com/acse-sm321/Mogo/common"
 	log "github.com/micro/go-micro/v2/logger"
+	"github.com/shuheng-mo/Mogo/category/domain/model"
+	"github.com/shuheng-mo/Mogo/category/domain/service"
+	category "github.com/shuheng-mo/Mogo/category/proto/category"
+	"github.com/shuheng-mo/Mogo/common"
 )
 
 type Category struct {

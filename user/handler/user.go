@@ -2,9 +2,9 @@ package handler
 
 import (
 	"context"
-	"github.com/acse-sm321/Mogo/user/domain/model"
-	"github.com/acse-sm321/Mogo/user/domain/service"
-	user "github.com/acse-sm321/Mogo/user/proto/user"
+	"github.com/shuheng-mo/Mogo/user/domain/model"
+	"github.com/shuheng-mo/Mogo/user/domain/service"
+	user "github.com/shuheng-mo/Mogo/user/proto/user"
 )
 
 type User struct {

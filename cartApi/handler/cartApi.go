@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	cart "github.com/acse-sm321/Mogo/cart/proto/cart"
-	cartApi "github.com/acse-sm321/Mogo/cartApi/proto/cartApi"
 	log "github.com/micro/go-micro/v2/logger"
+	cart "github.com/shuheng-mo/Mogo/cart/proto/cart"
+	cartApi "github.com/shuheng-mo/Mogo/cartApi/proto/cartApi"
 	"strconv"
 )
 

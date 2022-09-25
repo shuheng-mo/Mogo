@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/acse-sm321/Mogo/payment/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/shuheng-mo/Mogo/payment/domain/model"
 )
 
 type IPaymentRepository interface {

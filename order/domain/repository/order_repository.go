@@ -2,8 +2,8 @@ package repository
 
 import (
 	"errors"
-	"github.com/acse-sm321/Mogo/order/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/shuheng-mo/Mogo/order/domain/model"
 )
 
 type IOrderRepository interface {

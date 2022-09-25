@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	log "github.com/micro/go-micro/v2/logger"
 
-	paymentApi "github.com/acse-sm321/Mogo/paymentApi/proto/paymentApi"
+	paymentApi "github.com/shuheng-mo/Mogo/paymentApi/proto/paymentApi"
 )
 
 type PaymentApi struct{}

@@ -1,21 +1,19 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/common"
-	"github.com/acse-sm321/Mogo/payment/domain/repository"
-	service2 "github.com/acse-sm321/Mogo/payment/domain/service"
-	"github.com/acse-sm321/Mogo/payment/handler"
-	payment "github.com/acse-sm321/Mogo/payment/proto/payment"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
-	"github.com/micro/go-plugins/wrapper/monitoring/prometheus/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
-	"github.com/opentracing/opentracing-go"
+	"github.com/shuheng-mo/Mogo/common"
+	"github.com/shuheng-mo/Mogo/payment/domain/repository"
+	service2 "github.com/shuheng-mo/Mogo/payment/domain/service"
+	"github.com/shuheng-mo/Mogo/payment/handler"
+	payment "github.com/shuheng-mo/Mogo/payment/proto/payment"
 )
 
 func main() {

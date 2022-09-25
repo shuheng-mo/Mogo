@@ -2,10 +2,10 @@ package handler
 
 import (
 	"context"
-	"github.com/acse-sm321/Mogo/common"
-	"github.com/acse-sm321/Mogo/order/domain/model"
-	"github.com/acse-sm321/Mogo/order/domain/service"
-	. "github.com/acse-sm321/Mogo/order/proto/order"
+	"github.com/shuheng-mo/Mogo/common"
+	"github.com/shuheng-mo/Mogo/order/domain/model"
+	"github.com/shuheng-mo/Mogo/order/domain/service"
+	. "github.com/shuheng-mo/Mogo/order/proto/order"
 )
 
 type Order struct {

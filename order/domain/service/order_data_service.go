@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/acse-sm321/Mogo/order/domain/model"
-	"github.com/acse-sm321/Mogo/order/domain/repository"
+	"github.com/shuheng-mo/Mogo/order/domain/model"
+	"github.com/shuheng-mo/Mogo/order/domain/repository"
 )
 
 type IOrderDataService interface {

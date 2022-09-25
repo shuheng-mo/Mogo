@@ -2,6 +2,8 @@ module github.com/shuheng-mo/Mogo/common
 
 go 1.17
 
+replace google.golang.org/grpc => google.golang.org/grpc v1.29.1
+
 require (
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1

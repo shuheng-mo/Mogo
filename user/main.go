@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/acse-sm321/Mogo/user/domain/repository"
-	service2 "github.com/acse-sm321/Mogo/user/domain/service"
-	"github.com/acse-sm321/Mogo/user/handler"
-	user "github.com/acse-sm321/Mogo/user/proto/user"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
+	"github.com/shuheng-mo/Mogo/user/domain/repository"
+	service2 "github.com/shuheng-mo/Mogo/user/domain/service"
+	"github.com/shuheng-mo/Mogo/user/handler"
+	user "github.com/shuheng-mo/Mogo/user/proto/user"
 )
 
 // get the

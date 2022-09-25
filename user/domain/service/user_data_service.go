@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
-	"github.com/acse-sm321/Mogo/user/domain/model"
-	"github.com/acse-sm321/Mogo/user/domain/repository"
+	"github.com/shuheng-mo/Mogo/user/domain/model"
+	"github.com/shuheng-mo/Mogo/user/domain/repository"
 	"golang.org/x/crypto/bcrypt"
 )
 

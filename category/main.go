@@ -1,17 +1,16 @@
 package main
 
 import (
-	"github.com/acse-sm321/Mogo/category/domain/repository"
-	service2 "github.com/acse-sm321/Mogo/category/domain/service"
-	"github.com/acse-sm321/Mogo/category/handler"
-	category "github.com/acse-sm321/Mogo/category/proto/category"
-	"github.com/acse-sm321/Mogo/common"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
-	"github.com/micro/go-plugins/registry/consul/v2"
+	"github.com/shuheng-mo/Mogo/category/domain/repository"
+	service2 "github.com/shuheng-mo/Mogo/category/domain/service"
+	"github.com/shuheng-mo/Mogo/category/handler"
+	category "github.com/shuheng-mo/Mogo/category/proto/category"
+	"github.com/shuheng-mo/Mogo/common"
 )
 
 func main() {
